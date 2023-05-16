@@ -1,3 +1,24 @@
 {
-  "TODO": "Complete this Schema! (Make sure to delete this Key/Value Pair!"
+  "type": "record",
+  "name": "weather_values",
+  "fields": [
+    {
+      "name": "temperature",
+      "type": "float"
+    },
+    {
+      "name": "status",
+      "type": {
+        "type": "enum",
+        "name": "weather_status",
+        "symbols": [
+          "sunny",
+          "partly_cloudy",
+          "cloudy",
+          "windy",
+          "precipitation"
+        ]
+      }
+    }
+  ]
 }
