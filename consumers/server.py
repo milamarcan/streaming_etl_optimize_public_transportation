@@ -90,7 +90,7 @@ def run_server():
 
     try:
         logger.info(
-            "Open a web browser to http://localhost:8888 to see the Transit Status Page"
+            "Open a web browser to http://ksql:8888 to see the Transit Status Page"
         )
         for consumer in consumers:
             tornado.ioloop.IOLoop.current().spawn_callback(consumer.consume)
