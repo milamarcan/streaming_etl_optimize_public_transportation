@@ -9,8 +9,8 @@ from tornado import gen
 
 
 logger = logging.getLogger(__name__)
-BROKER_URL = "PLAINTEXT://localhost:9092"
-SCHEMA_REGISTRY_URL = "http://localhost:8081"
+BROKER_URL = "PLAINTEXT://kafka0:9092"
+SCHEMA_REGISTRY_URL = "http://schema-registry:8081"
 
 
 class KafkaConsumer:
@@ -39,7 +39,7 @@ class KafkaConsumer:
         }
 
         if is_avro is True:
-            self.broker_properties["schema.registry.url"] = "http://localhost:8081"
+            self.broker_properties["schema.registry.url"] = "http://schema-registry:8081"
             self.consumer = AvroConsumer(self.broker_properties)
         else:
             self.consumer = Consumer(self.broker_properties)
