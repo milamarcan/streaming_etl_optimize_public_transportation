@@ -14,7 +14,7 @@ Building streaming event pipeline around Apache Kafka and its ecosystem (REST Pr
 ### Pre-requisites
 
 - Create a new virtual environment for the project (optional but highly recommended)
-- Run 'requirements.txt' file to install dependencies for the project (pip install -r requirements.txt)
+- Run 'requirements.txt' file to install dependencies for the project (`pip install -r requirements.txt`)
 
 ### How to run the project
 

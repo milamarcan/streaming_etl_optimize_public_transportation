@@ -2,7 +2,7 @@
 
 The data in this directory is used as the seed data that simulator uses to generate event data.
 
-Much of the data in this directory is derived from the (City of Chicago Transit Authority's open
+Much of the data in this directory is derived from the [City of Chicago Transit Authority's open
 datasets](https://www.transitchicago.com/data/). Thank you to the City of Chicago for providing
 this data! Specifically, the following datasets originate from this source:
 
