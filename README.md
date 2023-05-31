@@ -7,7 +7,7 @@ Building streaming event pipeline around Apache Kafka and its ecosystem (REST Pr
 
 ## Project architecture
 
-[Architecture for the project](/images/diagram.png)
+![Architecture for the project](/images/diagram.png)
 
 ## Running the project
 
