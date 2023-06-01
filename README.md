@@ -3,7 +3,7 @@
 
 ## Project overview
 
-Building streaming event pipeline around Apache Kafka and its ecosystem (REST Proxy, Kafka Connect). The result is a webpage that displays the status of train lines in real time.
+Building streaming event pipeline around Apache Kafka and its ecosystem (REST Proxy, Kafka Connect), that allows us to simulate and display the status of train lines in real time. 
 
 ## Project architecture
 
@@ -13,8 +13,11 @@ Building streaming event pipeline around Apache Kafka and its ecosystem (REST Pr
 
 ### Pre-requisites
 
-- Create a new virtual environment for the project (optional but highly recommended)
-- Run 'requirements.txt' file to install dependencies for the project (`pip install -r requirements.txt`)
+- Install [Docker](https://docs.docker.com/engine/install/), make sure Docker Compose is installed too
+- If you are on Windows machine, install Windows Subsystem for Linux (WSL) 2
+- Install Ubuntu 20.04
+- Inside Ubuntu, in a terminal instance run `docker-compose up`
+    - You can check status of the environment by running `docker-compose ps` in a new terminal instance
 
 ### How to run the project
 
@@ -48,6 +51,10 @@ Hit `Ctrl+C` at any time to exit.
     - `pip install -r requirements.txt`
     - `cpython server.py`
 Hit `Ctrl+C` at any time to exit.
+
+### How to stop the project
+- To stop Docker run `docker-compose stop` in a terminal instance
+- To clean up the containers to reclaim disk space, run `docker-compose rm -v`
 
 ## Output
 
