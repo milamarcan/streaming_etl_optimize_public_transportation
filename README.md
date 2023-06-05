@@ -14,8 +14,9 @@ Building streaming event pipeline around Apache Kafka and its ecosystem (REST Pr
 ### Pre-requisites
 
 - Install [Docker](https://docs.docker.com/engine/install/), make sure Docker Compose is installed too
-- If you are on Windows machine, install Windows Subsystem for Linux (WSL) 2
+- If you are on Windows machine, install: Windows Subsystem for Linux (WSL) version 2 [link](https://learn.microsoft.com/en-us/windows/wsl/install)
 - Install Ubuntu 20.04
+- If you are on Windows machine, also install `librdkafka` library [link](https://github.com/confluentinc/librdkafka), make sure to install what is needed from [this link](https://docs.confluent.io/platform/current/installation/installing_cp/deb-ubuntu.html#get-the-software) too
 - Inside Ubuntu, in a terminal instance run `docker-compose up`
     - You can check status of the environment by running `docker-compose ps` in a new terminal instance
 
