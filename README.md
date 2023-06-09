@@ -3,7 +3,12 @@
 
 ## Project overview
 
-Building streaming event pipeline around Apache Kafka and its ecosystem (REST Proxy, Kafka Connect), that allows us to simulate and display the status of train lines in real time. 
+Building streaming event pipeline around Apache Kafka and its ecosystem (REST Proxy, Kafka Connect), that allows to simulate and display the status of train lines in real time. 
+
+## Project assignment
+
+You are constructing a streaming event pipeline around Apache Kafka and its ecosystem. Using public data from the [Chicago Transit Authority](https://www.transitchicago.com/data/) you will construct an event pipeline around Kafka that allows us to simulate and display the status of train lines in real time.
+When the project is completed, you will be able to monitor a website to watch trains move from station to station.
 
 ## Project architecture
 
