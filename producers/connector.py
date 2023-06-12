@@ -1,12 +1,13 @@
 """Configures a Kafka Connector for Postgres Station data"""
 import json
 import logging
-
+import configparser
 import requests
 
 
 logger = logging.getLogger(__name__)
-
+config = configparser.ConfigParser()
+config.read('db_config.cfg')
 
 KAFKA_CONNECT_URL = "http://kafka-connect:8083/connectors"
 CONNECTOR_NAME = "stations"
@@ -32,9 +33,9 @@ def configure_connector():
                 "value.converter": "org.apache.kafka.connect.json.JsonConverter",
                 "value.converter.schemas.enable": "false",
                 "batch.max.rows": "500",
-                "connection.url": "jdbc:postgresql://postgres:5432/cta",
-                "connection.user": "",
-                "connection.password": "",
+                "connection.url": "jdbc:postgresql://postgres:config['DATABASE']['DB_PORT']/config['DATABASE']['DB_NAME']",
+                "connection.user": config.get("DATABASE", "DB_USER"),
+                "connection.password": config.get("DATABASE", "DB_PASSWORD"),
                 "table.whitelist": "stations",
                 "mode": "incrementing",
                 "incrementing.column.name": "stop_id",
