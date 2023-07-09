@@ -21,7 +21,7 @@ def configure_connector():
     if resp.status_code == 200:
         logging.debug("connector already created skipping recreation")
         return
-     resp = requests.post(
+    resp = requests.post(
         KAFKA_CONNECT_URL,
         headers={"Content-Type": "application/json"},
         data=json.dumps({
@@ -33,7 +33,8 @@ def configure_connector():
                 "value.converter": "org.apache.kafka.connect.json.JsonConverter",
                 "value.converter.schemas.enable": "false",
                 "batch.max.rows": "500",
-                "connection.url": "jdbc:postgresql://postgres:config['DATABASE']['DB_PORT']/config['DATABASE']['DB_NAME']",
+                "connection.url": "jdbc:postgresql://postgres:config['DATABASE']\
+                    ['DB_PORT']/config['DATABASE']['DB_NAME']",
                 "connection.user": config.get("DATABASE", "DB_USER"),
                 "connection.password": config.get("DATABASE", "DB_PASSWORD"),
                 "table.whitelist": "stations",
